@@ -1,12 +1,8 @@
 import styles from "../App.module.css";
 import classNames from "classnames";
+import { Complete } from "../types/types";
 
-interface ListItemProps {
-	title: string;
-	id: string;
-}
-
-function ListItem(props: ListItemProps) {
+function ListItem(props: Complete) {
 	return (
 		<li key={props.id} className={classNames(styles["listItem"], "form-check")}>
 			<label
@@ -19,7 +15,9 @@ function ListItem(props: ListItemProps) {
 				className="form-check-input"
 				type="checkbox"
 				value=""
+				checked={props.complete}
 				id="flexCheckDefault"
+				onClick={() => props.onClick()}
 			/>
 		</li>
 	);
