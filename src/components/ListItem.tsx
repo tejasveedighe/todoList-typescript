@@ -1,5 +1,5 @@
-import React from "react";
 import styles from "../App.module.css";
+import classNames from "classnames";
 
 interface ListItemProps {
 	title: string;
@@ -8,9 +8,19 @@ interface ListItemProps {
 
 function ListItem(props: ListItemProps) {
 	return (
-		<li className={styles["listItem"]}>
-			<p className={styles["itemName"]}>Firs5t</p>
-			<input type="checkbox" />
+		<li key={props.id} className={classNames(styles["listItem"], "form-check")}>
+			<label
+				className={classNames("form-check-label", styles["itemName"])}
+				htmlFor="flexCheckDefault"
+			>
+				{props.title}
+			</label>
+			<input
+				className="form-check-input"
+				type="checkbox"
+				value=""
+				id="flexCheckDefault"
+			/>
 		</li>
 	);
 }
