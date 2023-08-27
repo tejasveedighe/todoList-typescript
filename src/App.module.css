@@ -1,0 +1,26 @@
+.App {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.todoList_container {
+	border: 1px solid red;
+	width: 90%;
+	height: fit-content;
+}
+
+.todoList {
+	list-style-type: none;
+}
+
+.listItem {
+	margin: auto;
+	width: 50%;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
